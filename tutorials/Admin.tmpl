@@ -1,0 +1,5 @@
+USE Edicod;
+UPDATE user SET MD5Pass=MD5('%%MYPASS%%'), name='Administrateur', given_name='Edicod', email='', phone='', num=0, address1='',city='', zip='';
+UPDATE parameters SET value='Edicod' WHERE name='SqlUsr';
+UPDATE parameters SET value='Edicod' WHERE name='SqlPwd';
+UPDATE parameters SET value='Edicod' WHERE name='SqlBase';

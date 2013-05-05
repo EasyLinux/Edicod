@@ -1,0 +1,182 @@
+﻿<refentry id="{@id}">
+ <refnamediv>
+  <refname>Sp&eacute;cifications fonctionnelles EDICOD V1</refname>
+  <refpurpose>Sp&eacute;cifications fonctionnelles EDICOD V1</refpurpose>
+ </refnamediv>
+ <refsynopsisdiv>
+  <author>Annie BOURGET <authorblurb>{@link mailto:annie.bourget@edicia.fr annie.bourget@edicia.fr}</authorblurb></author>
+ </refsynopsisdiv>
+ {@toc}
+  <refsect1 id="{@id Introduction}">
+   <title>Ergonomie g&eacute;n&eacute;rale</title>
+    <para><important>EDICOD</important> doit permettre a une personne ayant les droits de consultation de retrouver rapidement un
+               courrier, cela sans aucune formation ou explication du produit. 
+    </para>
+    <para>
+      On utilisera abusivement les icones les plus standards possible ainsi que les popup permettant une
+      explication br&egrave;ve de la fonction. Pour les informations non modifiables, pr&eacute;voir l'affichage en gris.
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Accueil}">
+    <title>Ecran d'accueil</title>
+    <para>L'&eacute;cran d'accueil dispose de 4 onglets de base : &lt;<important>Pour information</important>&gt;, &lt;<important>A traiter</important>&gt;,
+     &lt;<important>Mon historique</important>&gt; &lt;<important>A affecter</important>&gt;
+    </para>
+    <refsect2 id="{@id Info}">
+      <title>Onglet pour information</title>
+      <para>Affiche les courriers pour lesquels on est juste en copie ou en lecture pour information.
+      </para>
+    </refsect2>
+    <refsect2 id="{@id Atraiter}">
+      <title>Onglet : A traiter</title>
+      <para>Affiche les courriers pour lesquels EDICOD est en attente d'une action de la part de l'utilisateur : une
+                 validation, un compl&eacute;ment d'information, la r&eacute;daction d'une r&eacute;ponse...
+      </para>
+    </refsect2>
+    <refsect2 id="{@id Histo}">
+      <title>Onglet : Mon historique</title>
+      <para>Affiche par ordre chronologique tous les courriers pour lesquels l'utilisateur a &eacute;t&eacute; acteur ou en copie.
+      </para>
+    </refsect2>
+    <refsect2 id="{@id Affecter}">
+      <title>Onglet : A affecter</title>
+      <para>Apparait uniquement pour les utilisateurs en charge d'affecter les courrier dans les services, affiche
+                 tous les courriers en arriv&eacute;e qui viennent d'&ecirc;tre num&eacute;ris&eacute;s.
+      </para>
+    </refsect2>
+  </refsect1>
+  <refsect1 id="{@id Recherche}">
+    <title>Module de recherche</title>
+    <para>Les utilisateurs connaissent tous la simplicit&eacute; et l'efficacit&eacute; de Google ou autres moteurs. Celui
+               d'EDICOD doit &ecirc;tre simplissime et r&eacute;pondre aux m&ecirc;mes automatismes :
+      <itemizedlist>
+        <listitem>La recherche en texte int&eacute;gral est bas&eacute;e sur le stockage de chaque mot individuellement.</listitem>
+        <listitem>Les mots stock&eacute;s sont issus des champs &quot;objet&quot;, &quot;mots-cl&eacute;s&quot; et le r&eacute;sultat de l&#130;extraction du .pdf</listitem>
+        <listitem>Le fichier est lu et envoy&eacute; dans une variable.</listitem>
+        <listitem>Les caract&egrave;res accentu&eacute;s sont remplac&eacute;s par leur homologue ex: &eacute; -> e.</listitem>
+        <listitem>Les mots sont mis en minuscule. (pas de distinction MAJ/MIN)</listitem>
+        <listitem>Une liste est constitu&eacute;e avec pour chaque mot son occurrence dans le texte.</listitem>
+        <listitem>Ce r&eacute;sultat est stock&eacute; dans la base.</listitem>
+        <listitem>Par d&eacute;faut, plusieurs mots dans le champ &quot;rechercher&quot; sont s&eacute;par&eacute;s par un &quot;ou&quot; implicite</listitem>
+      </itemizedlist>
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Entrant}">
+    <title>Fonctionnement courrier entrant</title>
+    <para>Les courriers sont scann&eacute;s et d&eacute;pos&eacute;s dans un r&eacute;pertoire. On peut avoir un r&eacute;pertoire unique ou un
+               r&eacute;pertoire par groupe d&#130;utilisateurs ou service (ex : Comptabilit&eacute;, Ressources humaines, ST, ...). Ces
+              r&eacute;pertoires correspondent typiquement aux bannettes de l'organisation r&eacute;elle des services. Le
+              programme lit ces r&eacute;pertoires, int&egrave;gre les fichiers qu&#130;il y trouve dans la base <important>EDICOD</important> et y associe une
+              fiche suiveuse (voir fiche suiveuse)
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Suiveuse}">
+    <title>Gestion du courrier : fiche suiveuse</title>
+    <para>Le module gestion du courrier est centr&eacute; sur la fiche suiveuse dot&eacute;e de 4 onglets :
+    </para>
+    <refsect2 id="{@id oInf}">
+       <title>onglet : informations</title>
+       <para>
+         <itemizedlist>
+           <listitem><important>Date d'arriv&eacute;e</important> : calcul&eacute;e automatiquement, bas&eacute;e par d&eacute;faut sur la date de la num&eacute;risation, modifiable</listitem>
+           <listitem><important>Date de fin</important> : se met automatiquement quand on atteint la derni&egrave;re &eacute;tape d'un workflow, modifiable</listitem>
+           <listitem><important>chrono</important> : calcul&eacute; automatiquement, gris&eacute;</listitem>
+           <listitem><important>AR</important> : si courrier en recommand&eacute;, on entre son num&eacute;ro, facultatif</listitem>
+           <listitem><important>objet</important> : par d&eacute;faut le nom du fichier, changement obligatoire</listitem>
+           <listitem><important>emplacement physique de la pi&egrave;ce originale</important> : valeur par d&eacute;faut , non modifiable(*)</listitem>
+           <listitem><important>emplacement sur le disque du serveur</important> : valeur par d&eacute;faut, associ&eacute;e au workflow choisi, non modifiable (*)</listitem>
+           <listitem><important>Dossiers virtuels</important> : on peut associer le courrier a un ou plusieurs dossier(s) virtuel(s)</listitem>
+           <listitem><important>workflow ou service affect&eacute;</important> : choisi uniquement par le dispatcheur, obligatoire</listitem>
+           <listitem><important>&eacute;tat dans le syst&egrave;me</important> : en attente/ trait&eacute;/ archiv&eacute;</listitem>
+           <listitem><important>en copie/pour action</important>: type d'acc&egrave;s pour l'utilisateur connect&eacute; : d&eacute;fini dans le worflow</listitem>
+           <listitem><important>ajout de note</important> : facultatif, si demande de commentaire = obligatoire</listitem>
+           <listitem><important>ajout de pi&egrave;ce compl&eacute;mentaire</important> : quels que soient les droits ou uniquement l'acteur ?</listitem>
+           <listitem><important>mots-cl&eacute;s</important> : permet une description br&egrave;ve du courrier dans le but de recherche ult&eacute;rieure</listitem>
+         </itemizedlist>
+         association &agrave; un ou plusieurs dossiers virtuels : quels que soient les droits<br />
+         (*) ces valeurs sont param&eacute;tr&eacute;es par l'administrateur en m&ecirc;me temps que le workflow.
+       </para>
+    </refsect2>
+    <refsect3 id="{@id Chrono}">
+      <title>Chrono</title>
+      <para>Le chrono permet de donner un num&eacute;ro unique aux courriers sortants et entrants. Chaque courrier
+                  re&ccedil;oit un num&eacute;ro unique :<br />
+        <important>NB</important> Seuls les documents affect&eacute; sont visibles dans le chrono, ceux qui sont arriv&eacute; ne peuvent &ecirc;tre consult&eacute;.
+      </para>
+    </refsect3>
+    <refsect3 id="{@id AR}">
+      <title>AR</title>
+      <para>Si le courrier est en recommand&eacute;, possibilit&eacute; d'entrer son num&eacute;ro</para>
+    </refsect3>
+    <refsect3 id="{@id Expediteur}">
+      <title>Exp&eacute;diteur</title>
+      <para>Dans le cas du courrier entrant, le champ exp&eacute;diteur renseigne sur la nature de l'exp&eacute;diteur: facture,
+                 pr&eacute;fecture, usager, association, ecole, gendarmerie...<br />
+                 Dans le cas du courrier sortant, ce sera plut&ocirc;t le destinataire (transformer le libell&eacute; ?)</para>
+    </refsect3>
+    <refsect3 id="{@id Physique}">
+      <title>Classement physique</title>
+      <para>Les courriers &eacute;tant d&eacute;mat&eacute;rialis&eacute;s, le syst&egrave;me permet de faire r&eacute;f&eacute;rence au stockage &quot;papier&quot; de
+                  l&#130;original. Les emplacements sont param&eacute;tr&eacute;s par l'administrateur et sont en principe associ&eacute; au
+                  service destinataire. Ils correspondent &agrave; des classeurs ou &agrave; des cartons de rangement.</para>
+    </refsect3>
+    <refsect3 id="{@id Stockage}">
+      <title>Stockage</title>
+      <para>L'emplacement du fichier du courrier d&eacute;mat&eacute;rialis&eacute; indique dans quel endroit celui-ci est stock&eacute; sur
+                  le serveur. Les emplacements sont param&eacute;tr&eacute;s par l'administrateur et sont en principe associ&eacute;s au
+                  service destinataire.<br />
+                  <important>NB</important> Les noms de r&eacute;pertoire sont for&ccedil;&eacute; sans accent (lors de la saisie).
+      </para>
+    </refsect3>
+    <refsect3 id="{@id }">
+      <title>Dossier virtuel</title>
+      <para>Choix du dossier virtuel auquel on veut associer le courrier ouvert. Les dossiers virtuels sont
+                  pr&eacute;alablement param&eacute;tr&eacute;s dans le menu dossier virtuel.<br />
+                  RQ : y a-t-il une notion de dossiers virtuels globaux et personnels ?</para>
+    </refsect3>
+    <refsect2 id="{@id pieces}">
+       <title>Onglet : pi&egrave;ces attach&eacute;es</title>
+       <para>g&egrave;re les attachements, sur un courrier entrant la premi&egrave;re ligne est le courrier recu. Pour chaque
+                  pi&egrave;ce on a : date, heure, objet du fichier attach&eacute;, type (Entrant,r&eacute;ponse, compl&eacute;ment
+                  d'information...). Si r&eacute;ponse on a en plus : num&eacute;ro AR, auteur de disponible</para>
+    </refsect2>
+    <refsect2 id="{@id Notes}">
+       <title>onglet : notes</title>
+       <para>g&egrave;re les notes, un ast&eacute;risk rouge indique qu'il existe une note non lue : date, heure, auteur</para>
+    </refsect2>
+    <refsect2 id="{@id oHisto}">
+       <title>onglet : historique</title>
+       <para>actions et lecture sur le courrier : date, heure, auteur, type d'acc&egrave;s</para>
+    </refsect2>
+  </refsect1>
+  <refsect1 id="{@id Depart}">
+    <title>Courrier d&eacute;part</title>
+    <para>Utilise la m&ecirc;me fiche suiveuse et les m&ecirc;mes onglets, avec les diff&eacute;rences suivantes:
+      <itemizedlist>
+        <listitem>Exp&eacute;diteur est le nom de l'utilisateur, du service, ou d'une personne de la mairie</listitem>
+        <listitem>A la place de workflow on a une liste des lettres types dont une enti&egrave;rement libre.</listitem>
+      </itemizedlist>
+      Lettres types <br />
+      Il est possible de definir un jeu de lettres types, il est souhaitable d'avoir la possibilit&eacute; de modifier la
+      lettre. Certains champs sont a fusionner : date, chrono, expediteur...</para>
+  </refsect1>
+  <refsect1 id="{@id Administration}">
+    <title>Administration</title>
+    <para>A compl&eacute;ter...
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Workflow}">
+    <title>Workflow</title>
+    <para>Permet de pr&eacute;d&eacute;finir un traitement<br />
+               Actions possibles : affectation, lecture, validation etape, classement (ou fin) , correspondant
+               respectivement aux 4 onglets : &quot; A affecter &quot;, &quot; Pour information &quot;, &quot; A traiter &quot;, &quot; Mon historique &quot; <br />
+               Une date d'&eacute;ch&eacute;ance par d&eacute;faut est d&eacute;finie dans les param&eacute;trages.
+               Si cette date &quot; J &quot;=date arriv&eacute;e+10, le courrier &agrave; J-x passe en orange et &agrave; >=J passe en rouge
+    </para>
+  </refsect1>
+  <refsect1 id="{@id }">
+    <title></title>
+    <para>
+    </para>
+  </refsect1>
+ </refentry>

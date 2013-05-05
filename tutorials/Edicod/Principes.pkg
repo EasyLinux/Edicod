@@ -1,0 +1,103 @@
+﻿<refentry id="{@id}">
+ <refnamediv>
+  <refname>Principes</refname>
+  <refpurpose>Ce document d&eacute;crit les principes et m&eacute;thodes de codage</refpurpose>
+ </refnamediv>
+ <refsynopsisdiv>
+  <author>Serge NOEL <authorblurb>{@link mailto:cnc@edicia.fr cnc@edicia.fr}</authorblurb></author>
+ </refsynopsisdiv>
+ {@toc}
+  <refsect1 id="{@id Methodo}">
+    <title>M&eacute;thodologie de travail</title>
+    <para>Le d&eacute;veloppeur dispose d'une machine virtuelle (XUbuntu) afin de travailler, il utilise les copies locales.<br />
+    Cette machine est configur&eacute;e avec les outils suivants :
+      <itemizedlist mark="opencircle">
+        <listitem>Xubuntu Linux 10.10 (version all&eacute;g&eacute;e de Ubuntu)</listitem>
+        <listitem>Eclipse version H&eacute;lios avec le plug-in Subclipse (IDE avec outil de travail en &eacute;quipe)</listitem>
+        <listitem>Mysql Workbench (Gestion de base de donn&eacute;e en mode graphique)</listitem>
+        <listitem>Apache 2 (serveur HTML)</listitem>
+        <listitem>Mysql serveur (serveur de base de donn&eacute;es)</listitem>
+        <listitem>Firefox</listitem>
+      </itemizedlist> 
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Documentation}">
+    <title>Gestion de la documentation</title>
+    <para>La gestion de la documentation est confi&eacute;e &agrave; l'outil {@link http://www.phpdoc.org PhpDocumentor}.<br />
+    La g&eacute;n&eacute;ration de la documentation est r&eacute;alis&eacute;e en semi-automatique. <br />
+    La documentation est issue directement du code et g&eacute;n&eacute;r&eacute;e automatiquement, il est &eacute;galement possible de cr&eacute;er des documents 
+    directement comme ce tutoriel.<br/>
+    <command>NB:</command> la documentation est un point essentiel pour permettre le travail en &eacute;quipe sur le produit <command>Edicod</command></para>
+      <refsect2 id="{@id Source}">
+        <title>Documentation du code source</title>
+        <para>Il est imp&eacute;ratif de commenter la totalit&eacute; du code source, les commentaires se doivent d'&ecirc;tres concis et significatifs.<br />
+        Chaque fonction doit au minimum recevoir un commentaire sur son utilit&eacute; et la description des param&egrave;tres, leur type et la valeur de retour.</para>
+        <para>Les commentaires &agrave; l'int&eacute;rieur d'une fonction n'ont pas vocation &agrave; appara&icirc;tre dans les documents g&eacute;n&eacute;r&eacute;s.</para>
+      </refsect2>
+      <refsect2 id="{@id Tutoriel}">
+        <title>Documentation annexe</title>
+        <para>Toute documentation ne pouvant &ecirc;tre incorpor&eacute;e directement dans les sources doit faire l'objet d'un document complet d&eacute;taillant les 
+        syst&egrave;mes mis en oeuvre.</para>
+      </refsect2>
+      <refsect2 id="{@id Externe}">
+        <title>Documentation autre</title>
+        <para>La documentation fonctionnelle sera &eacute;galement incluse dans les sources et mise sous la forme de document docbook. Les documents commerciaux seront int&eacute;gr&eacute;s 
+        sous leur forme modifiable et &eacute;ventuellement en <command>.pdf</command> dans l'arborescence pr&eacute;vue &agrave; cet effet.</para>
+      </refsect2>
+  </refsect1>
+  <refsect1 id="{@id Biblio}">
+   <title>Biblioth&egrave;ques</title>
+    <para>
+      <itemizedlist mark="opencircle">
+        <listitem>Biblioth&egrave;que graphique Crystal {@link http://maison.net6a.com/Crystal.zip Crystal.zip}</listitem>
+        <listitem>Gestion de calendrier en Javascript {@link http://www.mattkruse.com/ Calendar}</listitem>
+        <listitem>Fonctions Php disponibles en javascript {@link http://phpjs.org PhpJS}</listitem>
+        <listitem>Gestion des fen&ecirc;tres en javascript {@link http://prototype-ui.com/ PrototypeUI}</listitem>
+        <listitem>Editeur HTML en ligne {@link http://tinymce.moxiecode.com/ TinyMCE}, {@link http://blog.ludikreation.com/2010/02/13/tinymce-documentation-fr-pour-bien-demarrer/ Documentation en francais}</listitem>
+        <listitem>G&eacute;n&eacute;ration de fichier pdf {@link http://www.tcpdf.org/ TCPDF}</listitem>
+      </itemizedlist>
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Arborescence}">
+    <title>Arborescence des fichiers</title>
+    <para>
+    <command>/</command> contient les fichiers principaux de l'application.<br/>
+    <command>/components</command> contient les composants de l'application, un r&eacute;pertoire par composant.<br />
+    <command>/composants/Login/</command> contient les fichiers n&eacute;cessaire au composant <important>Login</important>, un fichier de type <command>Login.php</command> doit exister.<br />
+    <command>/composants/...</command><br />
+    <command>/Cron/</command> contient les fichiers li&eacute;s &agrave; la commande 'cron' (partie automatique)<br />
+    <command>/css/</command> contient les feuilles de style <important>.css</important><br />
+    <command>/img/</command> contient les images <br />
+    <command>/img/menu/</command> contient le./MyDocss images du menu <br />
+    <command>/img/Login/</command> contient les images du composant <important>Login</important><br />
+    <command>/inc/</command> contient les fichiers communs &agrave; inclure. ex:<important>Menu.inc.php</important><br />
+    <command>/js/</command> contient les codes javascripts communs &agrave; l'application <br />
+    <command>/tmp/</command> fichiers temporaires<br />
+    <command>/tutorials/</command> contient l'exemple de document <important>Sample.pkg</important>, <important>edicod.mwb</important> fichier Mysql Workshop<br />
+    <command>/tutorials/Edicod/</command> contient les fichiers <important>.pkg</important> de documentation de l'application<br />
+    <command>/tutorials/Edicod/Pdf/</command> contient les versions <important>.pdf</important>  des documentations<br />
+    <command>/tutorials/Edicod/Docs/</command> contient les documentations au formats divers. (Powerpoint, Word, ...)
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Gestion du menu}">
+    <title>Gestion du menu</title>
+  </refsect1>
+  <refsect1 id="{@id Plateforme}">
+    <title>Plateforme</title>
+  </refsect1>
+  <refsect1 id="{@id Liens}">
+    <title>Liens</title>
+  </refsect1>
+  <refsect1 id="{@id Fulltext}">
+     <title>Principe de la recherche en text int&eacute;gral</title>
+     <para>La recherche en texte int&eacute;gral est bas&eacute; sur le stockage de chaque mot individuellement.
+      <itemizedlist mark="arrow">
+        <listitem>Le fichier est lu et envoy&eacute; dans une variable.</listitem>
+        <listitem>Les caract&egrave;res accentu&eactue;s sont remplac&eactue;s par leur homologue <command>ex: &eacute; -&gt; e</command>.</listitem>
+        <listitem>Les mots sont mis en minuscule.</listitem>
+        <listitem>Une liste est constitu&eacute;e avec pour chaque mot son occurence dans le texte.</listitem>
+        <listitem>Ce r&eacute;sultat est stock&eacute; dans la base.</listitem>
+      </itemizedlist>
+     </para>
+    </refsect1>
+</refentry>

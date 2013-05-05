@@ -1,0 +1,67 @@
+﻿<refentry id="{@id}">
+ <refnamediv>
+  <refname>Docbook</refname>
+  <refpurpose>Tutoriel rapide docbook</refpurpose>
+ </refnamediv>
+ <refsynopsisdiv>
+  <author>Serge NOEL <authorblurb>{@link mailto:cnc@edicia.fr cnc@edicia.fr}</authorblurb></author>
+ </refsynopsisdiv>
+ {@toc}
+  <refsect1 id="{@id Introduction}">
+   <title>Introduction</title>
+    <para>Descriptif rapide d'utilisation de docbook et de la r&eacute;alisation de documentation. <important>docBook</important> est 
+    un format de fichier <important>.xml</important> qui sert &agrave; d&eacute;crire la structure d'un document texte et plus particuli&egrave;rement des documents
+    d&eacute;di&eacute;s &agrave; la r&eacute;daction de documentation.
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Entete}">
+   <title>Fichier exemple</title>
+    <para>Un document docbook d'exemple est donn&eacute; ici {@link http://edidoc.edicia.local/tutorials/Sample.pkg Exemple} <br />
+    Ce fichier peut &ecirc;tre utilis&eacute; pour servir de point de d&eacute;part &agrave; un nouveau document. Il servira de caneva.  
+    </para>
+  </refsect1>
+  <refsect2 id="{@id Utilisation}">
+    <title>Utilisation</title>
+    <para>Le mieux est d'utiliser un &eacute;diteur XML, l'&eacute;diteur que j'utilise (Serge NOEL) est {@link http://xml-copy-editor.sourceforge.net/  XML Copy Editor}, c'est un logiciel libre disponible
+    &agrave; la fois sous Windows et Linux.</para>
+  </refsect2>
+  <refsect2 id="{@id Balises}">
+    <title>Balises</title>
+    <para>Nous utiliserons un sous ensemble de balise.</para>
+    <refsect3 id="{@id refname}">
+      <title>refname</title>
+      <para>Cette balise fait partie de l'ent&ecirc;te du document et sert &agrave; d&eacute;finir le nom de ce dernier. (Le nom est utilis&eacute; dans le menu de la documentation)</para>
+    </refsect3>
+    <refsect3 id="{@id refpurpose}">
+      <title>refpurpose</title>
+      <para>Cette balise fait partie de l'ent&ecirc;te du document et sert &agrave; d&eacute;finir le titre de ce dernier.</para>
+    </refsect3>
+    <refsect3 id="{@id author}">
+      <title>author</title>
+      <para>Cette balise fait partie de l'ent&ecirc;te du document et sert &agrave; d&eacute;finir lenom de l'auteur.</para>
+    </refsect3>
+    <refsect3 id="{@id refsect}">
+      <title>refsect</title>
+      <para>Chaque paragraphe est s&eacute;parer par une balise refsect1, refsect2 ou refsect3, selon son 'niveau'. Cela permet de sp&eacute;cifier une hi&eacute;rarchie dans les paragraphes.
+       refsect prend un param&egrave;tre <command>id</command> qui permet de faire le lien avec la table des mati&egrave;res (<command>toc</command>).<br />
+       Dans une section, il faut d&eacute;finir un titre et au moins un paragraphe (<command>&lt;title&gt;</command> <command>&lt;para&gt;</command>)  
+       </para>
+    </refsect3>
+    <refsect3 id="{@id itemizedlist}">
+      <title>itemiszelist</title>
+      <para>Cette balise permet de d&eacute;finir des listes.<code>
+      <![CDATA[ 
+      <itemizedlist>
+        <listitem>Test1</listitem>
+        <listitem>Test2</listitem>
+      </itemizedlist>
+      ]]></code>
+      Affichera :
+      <itemizedlist>
+        <listitem>Test1</listitem>
+        <listitem>Test2</listitem>
+      </itemizedlist>
+      </para>
+    </refsect3>
+  </refsect2>
+</refentry>

@@ -1,0 +1,22 @@
+﻿<refentry id="{@id}">
+ <refnamediv>
+  <refname>Classe Db</refname>
+  <refpurpose>Ce document d&eacute;crit l'utilisation de la classe <b>db</b></refpurpose>
+ </refnamediv>
+ <refsynopsisdiv>
+  <author>Serge NOEL <authorblurb>{@link mailto:cnc@edicia.fr cnc@edicia.fr}</authorblurb></author>
+ </refsynopsisdiv>
+  <refsect1 id="{@id Introduction}">
+   <title>Introduction</title>
+    <para>La classe gui g&egrave;re les acc&egrave;s &agrave; la base de donn&eacute;es.
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Introduction}">
+   <title>Mise &agrave; jour de la base</title>
+    <para>Edicod dispose d'un dispositif int&eacute;gr&eacute; qui permet la mise &agrave; jour automatique de la structure de la base de donn&eacute;es.
+    Fonctionnement :
+    Lors du premier appel &agrave; configure.php le script interroge le serveur edicod.edicia.fr pour connaitre la version de la base actuelle, il compare cette version avec sa version interne.
+    Si la version de sa base est inf&eacute;rieure &agrave; la version courante, il effectue les scripts SQL de mise &agrave; jour, puis met &agrave; jour son num&eacute;ro de version
+    </para>
+  </refsect1>
+</refentry>

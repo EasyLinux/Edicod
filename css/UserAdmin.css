@@ -1,0 +1,299 @@
+/***********************************
+ * Définitions propres à UserAdmin *
+ ***********************************/
+
+.uaTitle {       
+  height:		25px;
+  width:		100%;
+  text-align:		center;
+  -moz-border-radius:	7px;
+  color:		#086DC8;
+  font-weight:		bold;
+}
+
+.uaButtons {       
+  height:		40px;
+  width:		100%;
+  margin-top:		10px;
+  text-align:		center;
+  -moz-border-radius:	7px;
+  color:		#086DC8;
+  font-weight:		bold;
+}
+
+.uaImgButton {
+  float:		right;
+  border: 		0px;
+  cursor:		pointer;
+  margin-right:		60px;
+  margin-top:		10px;
+  }
+
+
+.uaLine1 {       
+  width:		100%;
+  height:		20px;
+  padding:		0px;
+}
+
+.uaLine2 {       
+  width:		100%;
+  height:		auto;
+  padding:		0px;
+}
+
+.ua_Box {
+  border: 		1px solid black;
+  float:		left;
+  width:		20px;
+  height:		20px;
+  margin-left:		10px;	
+}
+
+.ua_Id {
+  float:		left;
+  border-top: 		1px solid black;
+  border-right:		1px solid black;
+  border-bottom:	1px solid black; 
+  width:		40px;
+  height:		20px;
+}
+
+.ua_Login {
+  float:		left;
+  border-top: 		1px solid black;
+  border-right:		1px solid black;
+  border-bottom:	1px solid black;
+  height:		20px;
+}
+
+.ua_Name {
+  float:		left;
+  border-top: 		1px solid black;
+  border-right:		1px solid black;
+  border-bottom:	1px solid black;
+  width:		140px;
+  height:		20px;
+}
+
+.ua_Given {
+  float:		left;
+  border-top: 		1px solid black;
+  border-right:		1px solid black;
+  border-bottom:	1px solid black;
+  width:		140px;
+  height:		20px;
+}
+
+.ua_Profile {
+  float:		left;
+  border-top: 		1px solid black;
+  border-right:		1px solid black;
+  border-bottom:	1px solid black;
+  width:		150px;
+  height:		20px;
+  margin-right:		10px;	
+}
+
+.uaBox {
+  border-right:		1px solid gray;
+  border-bottom:	1px dashed gray;
+  float:		left;
+  width:		20px;
+  height:		20px;
+}
+
+.uaId {
+  float:		left;
+  border-right:		1px solid gray;
+  border-bottom:	1px dashed gray;
+  width:		40px;
+  height:		20px;
+}
+
+.uaLogin {
+  float:		left;
+  border-right:		1px solid gray;
+  border-bottom:	1px dashed gray;
+  width:		90px;
+  height:		20px;
+}
+
+.uaName {
+  float:		left;
+  border-right:		1px solid gray;
+  border-bottom:	1px dashed gray;
+  width:		140px;
+  height:		20px;
+}
+
+.uaGiven {
+  float:		left;
+  border-right:		1px solid gray;
+  border-bottom:	1px dashed gray;
+  height:		20px;
+  width:		140px;
+}
+
+.uaProfile {
+  float:		left;
+  border-bottom:	1px dashed gray;
+  height:		20px;
+  width:		120px;
+  margin-right:		10px;	
+}
+
+.uaList {
+  border-left: 		1px solid black;
+  border-right:		1px solid black;
+  border-bottom:	1px solid black;
+  width:		585px;
+  height:		300px;
+  margin-left:		10px;	
+  overflow:		auto;
+}
+
+.uaStatus {
+  color:		green;
+}
+
+/************
+ * Le Popup *
+ ************/
+
+.uaPopup {
+  display:		none;
+  position:		absolute;
+  background-color:	#E5EFFF;
+  border:		2px solid black;
+  -moz-border-radius:	7px;
+  width:		420px;
+  height:		260px;
+  left:			300px;
+  top:			140px;
+}
+
+/* Tabulations */
+.uaTab1 { 
+  background-color:	#C1D2EF;
+  float:		left;
+  width:		100px;
+  font-weight:		normal;
+  font-size:		18px;
+  cursor:		pointer;
+  padding:		0px;
+  margin-bottom:	0px;
+  border-left:		1px solid #E5EFFF;
+  border-top:		1px solid #E5EFFF;
+  border-right:		1px solid #B1C2DF;
+  border-bottom:	1px solid #C1D2EF;
+  margin-left:		10px;
+  }
+
+.uaTab2 { 
+  background-color:	#D5DFFF;
+  float:		left;
+  width:		100px;
+  font-weight:		normal;
+  font-size:		18px;
+  cursor:		pointer;
+  }
+
+.uaTab3 { 
+  background-color:	#D5DFFF;
+  float:		left;
+  width:		100px;
+  font-weight:		normal;
+  font-size:		18px;
+  cursor:		pointer;
+  padding:		0px;
+  margin-bottom:	0px;
+  margin-left:		10px;
+  }
+
+.uaTab4 { 
+  background-color:	#C1D2EF;
+  float:		left;
+  width:		100px;
+  font-weight:		normal;
+  font-size:		18px;
+  cursor:		pointer;
+  border-left:		1px solid #E5EFFF;
+  border-top:		1px solid #E5EFFF;
+  border-right:		1px solid #B1C2DF;
+  border-bottom:	1px solid #C1D2EF;
+  }
+
+.uaTabOn {
+  display:		block;
+  background-color:	#C1D2EF;
+  float:		left;
+  margin-left:		10px;
+  margin-top:		0px;
+  border-left:		1px solid #E5EFFF;
+  border-bottom:	1px solid #B1C2DF;
+  border-right:		1px solid #B1C2DF;
+  border-top:		1px solid #C1D2EF;
+  padding:		0px;
+  width:		390px;
+  height:		160px;
+}
+
+.uaTabOff {
+  display:		none;
+  background-color:	#C1D2EF;
+  float:		left;
+  margin-left:		10px;
+  margin-top:		0px;
+  border-left:		1px solid #E5EFFF;
+  border-bottom:	1px solid #B1C2DF;
+  border-right:		1px solid #B1C2DF;
+  border-top:		1px solid #C1D2EF;
+  padding:		0px;
+  width:		390px;
+  height:		160px;
+}
+
+
+.uaPopupLine {
+  width:		100%;
+  font-size:		14px;
+  height:		24px;
+}
+
+.uaPopupL {
+  float:		left;
+  font-weight:		bold;
+  display:		block;
+  margin-left:		20px;
+  width:		130px;
+}
+
+.uaPopupR {
+  float:		left;
+  display:		block;
+  width:		180px;
+}
+
+.uaPopupI {    
+  float:		left;
+  width:		160px;
+  height:		15px;
+  color:		#565656;
+  background-color:	#D0D0D0;
+  border:		1px solid #A6A6A6;
+  -moz-border-radius:	0px; 
+  margin-left:		0px;
+}
+
+.uaPopupI2 {    
+  float:		left;
+  width:		160px;
+  height:		18px;
+  color:		#565656;
+  background-color:	#D0D0D0;
+  border:		1px solid #A6A6A6;
+  -moz-border-radius:	0px; 
+  margin-left:		0px;
+}
+

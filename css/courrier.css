@@ -1,0 +1,900 @@
+/********************************
+ * Commun à toute l'application *
+ ********************************/
+body { 
+  font-family: 		"Trebuchet MS", Arial, Helvetica, sans-serif; 
+  font-size:		13px;
+  background-image: 	url('../img/bg_box.png') ;
+  background-repeat: 	repeat-x ;
+}
+
+.ImgButton {
+  float:		left;
+  border: 		0px;
+  cursor:		pointer;
+  margin-right:		10px;
+  }
+
+.Img {
+  border: 		0px;
+  }
+
+.ImgButtonBar {
+  border: 		0px;
+  cursor:		pointer;
+  }
+
+.main {
+  float: 		left;
+  margin-left: 		20px;
+  margin-bottom:	20px;
+}
+
+.Status {
+  position:		absolute;
+  left: 		20px;
+  right:		20px;
+  bottom:		5px;
+  height:		20px;
+}
+
+/*********
+ * Login *
+ *********/
+
+.LogAppLogo {    /* Le logo */
+  width: 		100% ;
+  height: 		40% ;
+}
+
+.CenterIE {
+  text-align:		center;
+}
+
+.LoginBox {      /* La boîte de login */
+  background-image: 	url('../img/bg_b.gif') ;
+  background-repeat: 	repeat-x ;
+  border:		1px solid #adcaff;
+  -moz-border-radius:	7px;
+  width:		400px;
+  height:		150px;
+  margin-left:		auto;
+  margin-right:		auto;
+  text-align:		left; 
+  font-family: 		arial,sans-serif ; 
+}
+
+.Logo {          /* Le logo dans la boîte */
+  margin-left:		10px;
+  margin-top:		10px;
+}
+
+.LogLine {       /* Ligne de texte dans la boîte */
+  margin-left:		70px;
+  margin-top:		10px;
+}
+
+.LogLineButton { /* Bouton de connection */
+  margin-right:		10px;
+  margin-top:		10px;
+  height:		40px;
+  width:		100%;
+  text-align:		right;
+}
+
+label.Login {    /* Label */
+  float:		left;
+  width:		130px;
+  color:		Black;
+  font-weight:		bold;
+  font-family: 		"Trebuchet MS", Arial, Helvetica, sans-serif; 
+  }
+
+input.login {    /* zone de saisie */
+  float:		right;
+  width:		150px;
+  margin-right:		30px;
+  color:		#565656;
+  border:		1px solid #B6B6B6;
+  font-family: 		arial,sans-serif ; 
+}
+
+.LogMsg {        /* zone de message d'erreur */
+  float:		left;
+  width:		100%;
+  color:		red;
+  font-size:		16px;
+  margin-left:		50px;
+  margin-top:		20px;
+  font-family: 		arial,sans-serif ; 
+  }
+
+/********
+ * Menu *
+ ********/
+
+.menu {
+  float: 		left;
+}
+
+.MenuLevel0 {
+  font-size:		14px;
+  color:		Black; /* #086DC8 */
+  text-align:		left;
+  font-weight:		bold;
+  margin-left:		10px;
+}
+
+.MenuLevel1 {
+  font-size:		14px;
+  text-align:		left;
+  color:		black;
+  text-decoration:	none;
+  font-weight:		normal;
+  margin-left:		25px;
+}
+
+.MenuLevelHome {
+  font-size:		14px;
+  text-align:		left;
+  color:		black;
+  text-decoration:	none;
+  font-weight:		normal;
+  margin-left:		10px;
+}
+
+a.aMenu a.aMenu:link a.aMenu:visited {
+  text-decoration:	none;
+  color:		black;
+}
+
+a.aMenu:active a.aMenu:hover {
+  text-decoration:	none;
+  color:		black;
+}
+
+/***********
+ * Bandeau *
+ ***********/
+.bandeau {
+  padding: 		0%;
+  margin: 		0%;
+  width: 		100%;
+  height:		100px;
+}
+
+.b-logo {
+	float: 		left;
+	width: 		200px;
+	height: 	100px;
+}
+
+.b-title {
+	float: left;
+  	font-size:		44px;
+	text-align:		left;
+        font-weight:		bold;
+	height: 		100px;
+}
+
+.b-title-v {
+  	font-size:		11px;
+	text-align:		left;
+        font-weight:		bold;
+}
+
+.b-info {
+	float: right;
+	width: 250px;
+}
+
+/***************
+ * Formulaires *
+ ***************/
+.Form {      /* La boîte de login */
+  background-image: 	url('../img/bg_b.gif') ;
+  background-repeat: 	repeat-x ;
+  border:		1px solid #adcaff;
+  -moz-border-radius:	7px;
+  margin-left:		50px;
+  margin-right:		20px;
+  text-align:		left; 
+}
+
+.FormTitle {       /* Entete */
+  height:		25px;
+  width:		100%;
+  text-align:		center;
+/*  background-color:	#086DC8; */
+  -moz-border-radius:	7px;
+  color:		Black;
+  font-weight:		bold;
+}
+
+.FormLine {       /* Ligne de texte dans la boîte */
+  width:		100%;
+  height:		25px;
+}
+
+.FormMsg {       /* Ligne de texte dans la boîte */
+  width:		100%;
+  height:		25px;
+  color:		green;
+}
+
+.FormLineButton { 
+  margin-right:		10px;
+  width:		100%;
+  text-align:		right;
+}
+
+input.Form {    
+  float:		left;
+  width:		150px;
+  height:		18px;
+  color:		#565656;
+  background-color:	white;
+  border:		1px solid #A6A6A6;
+  -moz-border-radius:	0px; 
+  margin-left:		0px;
+}
+
+span.FormL {    
+  float:		left;
+  height:		auto;
+  width:		130px;
+  color:		Black;
+  font-weight:		bold;
+  margin-left:		10px;
+}
+
+span.FormR {    
+  float:		left;
+  width:		150px;
+  height:		18px;
+  font-weight:		bold;
+  color:		#A0A0A0;
+  border:		1px solid #A6A6A6;
+  -moz-border-radius:	0px;
+}
+
+.Popup {
+  position:		absolute;
+  background-image: 	url('../img/bg_b.gif') ;
+  background-repeat: 	repeat-x ;
+  border:		1px solid black;
+  -moz-border-radius:	7px;
+  width:		350px;
+  height:		150px;
+  left:			250px;
+  top:			200px;
+}
+
+/*************************************************************************************/
+.form {      /* La boîte de login */
+/*  background-image: 	url('../img/bg_b.gif') ;
+  background-repeat: 	repeat-x ;
+  border:		1px solid #adcaff;
+  -moz-border-radius:	7px;
+  margin-left:		40px; */
+  text-align:		left; 
+}
+
+.formTitle {       
+  height:		25px;
+  width:		100%;
+  text-align:		center;
+  -moz-border-radius:	7px;
+  color:		Black;
+  font-weight:		bold;
+}
+
+.form_Box {
+  border: 		1px solid black;
+  float:		left;
+  width:		20px;
+  height:		20px;
+  margin-left:		10px;	
+}
+
+.form_Item {
+  float:		left;
+  border-top: 		1px solid black;
+  border-right:		1px solid black;
+  border-bottom:	1px solid black; 
+  height:		20px;
+  width:		100px;
+}
+
+.formList {
+  border-left: 		1px solid black;
+  border-right:		1px solid black;
+  border-bottom:	1px solid black;
+  margin-left:		10px;	
+  overflow:		auto;
+}
+
+.formLine2 {       
+  width:		100%;
+  height:		auto;
+  padding:		0px;
+}
+
+.formBox {
+  border-right:		1px solid gray;
+  border-bottom:	1px dashed gray;
+  float:		left;
+  width:		20px;
+  height:		20px;
+}
+
+.formItem {
+  float:		left;
+  border-right:		1px solid gray;
+  border-bottom:	1px dashed gray;
+  overflow:		hidden;
+  height:		20px;
+}
+
+.formLine {
+  width:		100%;
+  font-size:		14px;
+  height:		24px;
+}
+
+.formButtons {
+	float: left;       
+  height:		40px;
+  width:		100%;
+  text-align:		center;
+  -moz-border-radius:	7px;
+  color:		Black;
+  font-weight:		bold;
+}
+
+.formButtons2 {
+  
+	float: left;       
+ 	/*height:	40px;
+  	width: 95%;*/
+  	padding-left: 10px;
+  	margin-right: auto;
+  	margin-left: auto;
+  	margin-top: 10px;
+  	text-align:	center;
+  	-moz-border-radius:	7px;
+  	color: Black;
+  	font-weight: bold;
+}
+
+.formButtonsItem {
+  float:		left;
+  margin-top:		10px;
+  }
+  
+.formButtonsItemR 
+{
+	float: right;
+	margin-left: 10px;
+}
+
+.formButtonsItemL 
+{
+	float: left;
+	margin-right: 10px;
+}
+
+.formL {
+  float:		left;
+  font-weight:		bold;
+  display:		block;
+  margin-left:		20px;
+}
+
+
+/************
+ * Le Popup *
+ ************/
+
+.formPopup {
+  display:		none;
+  position:		absolute;
+  background-color:	#E5EFFF;
+  border:		2px solid black;
+  -moz-border-radius:	7px;
+}
+
+.formPopupLine {
+  width:		100%;
+  font-size:		14px;
+  height:		24px;
+}
+
+.formMargin { 
+  float:		left;
+  width:		5px;
+  margin-left:		5px;
+  }
+
+.formTabTitleOn { 
+  background-color:	#C1D2EF;
+  float:		left;
+  width:		100px;
+  font-weight:		normal;
+  font-size:		18px;
+  cursor:		pointer;
+  padding:		0px;
+  margin-bottom:	0px;
+  border-left:		1px solid #E5EFFF;
+  border-top:		1px solid #E5EFFF;
+  border-right:		1px solid #B1C2DF;
+  border-bottom:	1px solid #C1D2EF;
+  }
+
+.formTabTitleOff { 
+  background-color:	#D5DFFF;
+  border-right:		1px solid #B1C2DF;
+  float:		left;
+  width:		100px;
+  font-weight:		normal;
+  font-size:		18px;
+  cursor:		pointer;
+  }
+
+.formStatus {
+  position:		absolute;
+  bottom:		10px;
+  height:		24px;
+  color:		green;
+  width:		98%;
+}
+
+.formTabOn {
+  display:		block;
+  background-color:	#C1D2EF;
+  float:		left;
+  margin-top:		0px;
+  border-left:		1px solid #E5EFFF;
+  border-bottom:	1px solid #B1C2DF;
+  border-right:		1px solid #B1C2DF;
+  border-top:		1px solid #C1D2EF;
+  padding:		0px;
+}
+
+.formTabOff {
+  display:		none;
+  background-color:	#C1D2EF;
+  float:		left;
+  margin-left:		10px;
+  margin-top:		0px;
+  border-left:		1px solid #E5EFFF;
+  border-bottom:	1px solid #B1C2DF;
+  border-right:		1px solid #B1C2DF;
+  border-top:		1px solid #C1D2EF;
+  padding:		0px;
+}
+
+.formPopupL {
+  float:		left;
+  font-weight:		bold;
+  display:		block;
+  margin-left:		20px;
+}
+
+.uaPopupR {
+  float:		left;
+  display:		block;
+  width:		180px;
+}
+
+.formPopupI {    
+  float:		left;
+  height:		15px;
+  color:		#565656;
+  background-color:	#D0D0D0;
+  border:		1px solid #A6A6A6;
+  -moz-border-radius:	0px; 
+  margin-left:		0px;
+}
+
+.formPopupI2 {    
+  float:		left;
+  height:		15px;
+  color:		#565656;
+  background-color:	#D0D0D0;
+  border:		1px solid #A6A6A6;
+  -moz-border-radius:	0px; 
+  margin-left:		10px;
+}
+
+.formPopupS {    
+  float:		left;
+  height:		18px;
+  color:		#565656;
+  background-color:	#D0D0D0;
+  border:		1px solid #A6A6A6;
+  -moz-border-radius:	0px; 
+  margin-left:		0px;
+}
+
+.formPopupC {    
+  float:		left;
+  height:		15px;
+  color:		#565656;
+  margin-left:		0px;
+}
+
+/**************
+ * Front Page *
+ **************/
+
+a.fp:hover {
+  text-decoration:	none;
+  font-size:		11px;
+  color:		black;
+}
+
+a.fp {
+  font-size:		11px;
+  text-decoration:	none;
+  color:		black;
+}
+/*
+.fpTable {      * La boîte globale *
+  background-image: 	url('../img/bg_b.gif') ;
+  background-repeat: 	repeat-x ;
+  border:		1px solid #adcaff;
+  -moz-border-radius:	7px;
+  margin-left:		30px;
+  text-align:		left; 
+  float: 		left; 
+  width: 		650px;
+  display:		table;
+}*/
+
+.fpTabAll {
+  width:		670px;
+  margin-left:		10px;
+  margin-top:		10px;
+}
+
+.fpTabTitleOn {
+  float:		left;
+  width:		165px;
+  height:		25px;
+  text-align:		center;
+  color:		Black;
+  font-weight:		bold;
+  cursor:		pointer;
+  padding:		0px;
+  margin-bottom:	0px;
+  background-color:	#C1D2EF;
+  border-left:		1px solid #E5EFFF;
+  border-top:		1px solid #E5EFFF;
+  border-right:		1px solid #B1C2DF;
+}
+
+.fpTabTitleOff {
+  float:		left;
+  width:		165px;
+  height:		25px;
+  text-align:		center;
+  color:		Black;
+  font-weight:		bold;
+  cursor:		pointer;
+  padding:		0px;
+  margin-bottom:	0px;
+  background-color: 	#D5DFFF;
+  border-top: 		1px solid #B1C2DF; 
+  border-left: 		1px solid #B1C2DF; 
+  border-right: 	1px solid #B1C2DF;
+}
+
+.fpTab {
+  display:		none;
+  float:		left;
+  width:		665px;
+  height:		350px;
+  background-color:	#C1D2EF;
+  border-left:		1px solid #E5EFFF;
+  border-bottom:	1px solid #E5EFFF;
+  border-right:		1px solid #B1C2DF;
+}
+
+.fpLine {
+  width:		648px;
+  height:		132px;
+}
+
+.fpImg {
+  float:		left;
+  width:		140px;
+  height:		350px;
+  margin-top:		70px;
+}
+
+.fpStatus {
+  width:		670px;
+}
+
+.fpFoot {
+  display:		block;
+  font-size:		14px;
+  border-left:		1px solid #E5EFFF;
+  border-right:		1px solid #B1C2DF;
+  float:		left;
+  color:		#404040;
+}
+
+.fpTitle {
+  float:		left;
+  width:		490px;
+  height:		20px;
+  font-weight:		bold;
+  overflow:		auto;
+}
+
+.fpContent {
+  overflow:		auto;
+  float:		left;
+  width:		520px;
+  height:		310px;
+  border: 		1px dashed #808080;
+}
+
+.fpPopDiv1 {
+  float:		left;
+  font-size:		14px;
+  width:		120px;
+  height:		30px;
+}
+
+.fpPopDiv2 {
+  float:		left; 
+  font-size:		14px;
+  width:		350px;
+  height:		30px;
+}
+
+.fpLineDiv {
+  float:		left;
+  font-size:		12px;
+  min-height:		20px;
+}
+
+.fpPopInp {
+  border:		1px solid #999;
+  border-bottom-color:	#CCC;
+  border-right-color:	#CCC;
+  padding:		2px;
+  background-color:	#FFF;
+  color:		#333;
+  background-image:	url('../img/lighting/background_buttons.gif');
+  background-repeat:	repeat-x;
+  font-family:		Verdana, Arial, sans-serif;
+  font-size:		12px;
+}
+
+.fpPopInp2 {
+  border:		1px solid #999;
+  border-bottom-color:	#CCC;
+  border-right-color:	#CCC;
+  padding:		2px;
+  background-color:	#FFF;
+  color:		#333;
+  background-image:	url('../img/lighting/background_buttons.gif');
+  background-repeat:	repeat-x;
+  font-family:		Verdana, Arial, sans-serif;
+  font-size:		12px;
+  float:		left;
+}
+
+.fpPopInp3 {
+  border:		1px solid #999;
+  border-bottom-color:	#CCC;
+  border-right-color:	#CCC;
+  padding:		2px;
+  background-color:	#FFF;
+  color:		#333;
+  background-image:	url('../img/lighting/background_buttons.gif');
+  background-repeat:	repeat-x;
+  font-family:		Verdana, Arial, sans-serif;
+  font-size:		12px;
+}
+
+.fpPopInp4 {
+  border:		1px solid #9FBBDF;
+  padding:		2px;
+  color:		Gray;
+  background-color:	#BFDBFF;
+  font-family:		Verdana, Arial, sans-serif;
+  font-size:		12px;
+}
+
+.fpPopInp5 {
+  border:		1px solid #9FBBDF;
+  padding:	2px;
+  color:		Black;
+  background-color:	#FFFFFF;
+  font-family:		Verdana, Arial, sans-serif;
+  font-size:		12px;
+}
+
+.fpPopInp6 {
+  border:		1px solid #9FBBDF;
+  padding:		2px;
+  color:		Black;
+  background-color:	#BFDBFF;
+  font-family:		Verdana, Arial, sans-serif;
+  font-size:		12px;
+}
+
+.fpPopInp2Gray {
+  border:		1px solid #999;
+  border-bottom-color:	#CCC;
+  border-right-color:	#CCC;
+  padding:		2px;
+  background-color:	#FFF;
+  color:		#A0A0A0;
+  background-image:	url('../img/lighting/background_buttons.gif');
+  background-repeat:	repeat-x;
+  font-family:		Verdana, Arial, sans-serif;
+  font-size:		12px;
+  float:		left;
+}
+
+.fpComment {
+  width:		550px;
+  height:		60px;
+  border:		1px solid #999;
+  border-bottom-color:	#CCC;
+  border-right-color:	#CCC;
+  padding:		2px;
+  background-color:	#FFF;
+  color:		#333;
+  background-image:	url('../img/lighting/background_buttons.gif');
+  background-repeat:	repeat-x;
+  font-family:		Verdana, Arial, sans-serif;
+  font-size:		12px;
+  float:		left;
+}
+
+.fpPopSpan {
+  border:		1px solid red;
+  font-size:		14px;
+  height:		30px;
+}
+
+
+/*********
+ * Cadre *
+ *********/
+.Cadre {
+  background-image:	url('../img/template/left.png');
+  background-repeat: 	repeat-y;
+  background-color: 	#BFDBFF;
+  width:		250px;
+}
+
+
+.CadreLeft {
+  background-image:	url('../img/template/left.png');
+  background-repeat: 	repeat-y;
+  background-position: 	right;
+  width:		9px;
+}
+
+.CadreRight {
+  background-image:	url('../img/template/right.png');
+  background-repeat: 	repeat-y;
+  width:		15px;
+  background-position: 	right;
+}
+
+.CadreTop {
+  height:		28px;
+  background-image:	url('../img/template/top.png');
+  font-family:		Verdana, Arial, sans-serif;
+  font-size:		14px;
+  font-weight:		bold;
+  color:		black;
+  font-weight:		bold;
+}
+
+/*		.CadreTop img {
+		    vertical-align:top; * for ie5*
+		} */
+
+.CadreTopLeft {
+  width:		9px;
+  height:		28px;
+  background-image:	url('../img/template/top-left.png');
+  background-position: 	right;
+  background-repeat: 	no-repeat;
+}
+
+.CadreTopRight {
+  width:		15px;
+  height:		28px;
+  background-image:	url('../img/template/top-right.png');
+  float: 		right;
+}
+
+.CadreContent {
+  background-color:	#BFDBFF;
+}
+
+.CadreContent p {
+  margin: 		0px;
+}
+
+.CadreBottom {
+  height:		15px;
+  background-image:	url('../img/template/bottom.png');
+}
+
+.CadreBottomLeft {
+  background-image:	url('../img/template/bottom-left.png');
+  background-position: 	right;
+  background-repeat: 	no-repeat;
+  width:		9px;
+  height:		15px;
+}
+
+.CadreBottomRight {
+  width:		15px;
+  height:		15px;
+  background-image:	url('../img/template/bottom-right.png');
+  float:		right;
+}
+
+/*********
+ * dTree *
+ *********/
+.dtree {
+  font-family: 		Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 		11px;
+  color: 		#666;
+  white-space: 		nowrap;
+}
+.dtree img {
+  border: 		0px;
+  vertical-align: 	middle;
+}
+.dtree a {
+  color: 		#333;
+  text-decoration: 	none;
+}
+.dtree a.node, .dtree a.nodeSel {
+  white-space: 		nowrap;
+  padding: 		1px 2px 1px 2px;
+}
+.dtree a.node:hover, .dtree a.nodeSel:hover {
+  color: 		#333;
+  text-decoration: 	underline;
+}
+.dtree a.nodeSel {
+  background-color: 	#c0d2ec;
+}
+.dtree .clip {
+  overflow: 		hidden;
+}
+
+/****************
+ * BlueLighting *
+ ****************/
+.overlay_bluelighting {
+  background-color: 	#0000B0;
+  position: 		absolute; 
+  top: 			0px; 
+  left: 		0px; 
+  z-index: 		5; 
+  width: 		100%; 
+  height: 		100%; 
+  opacity: 		0.6; 
+  display: 		none;
+}
+
+/******************** Fin Mise En Page ****************************/
+
+

@@ -1,0 +1,83 @@
+﻿<refentry id="{@id}">
+ <refnamediv>
+  <refname>Documentation</refname>
+  <refpurpose>Ce document d&eacute;crit Edicod</refpurpose>
+ </refnamediv>
+ <refsynopsisdiv>
+  <author>Serge NOEL <authorblurb>{@link mailto:cnc@edicia.fr cnc@edicia.fr}</authorblurb></author>
+ </refsynopsisdiv>
+ {@toc}
+  <refsect1 id="{@id Introduction}">
+   <title>Introduction</title>
+    <para>Edicod est un programme en mode web, permettant le suivi des courriers et de l'activit&eacute; d'un groupe de travail.<br />
+      Le programme suit les recommendations d&eacute;taill&eacute;es dans le document {@link http://edidoc.edicia.local/Edicod/tutorial_Principes.pkg.html Principes}.<br/>
+      <important>Il est imp&eacute;ratif de se conformer &agrave; ce document.</important> Toute suggestion est la bienvenue.
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Liens}">
+    <title>Liens utiles</title>
+    <para>
+      <itemizedlist mark="opencircle">
+        <listitem>{@link http://edidoc.edicia.local/ Documentation} (Cette page).</listitem>
+        <listitem>{@link http://edicod.edicia.local/ Ediprod}: Serveur de production.</listitem>
+        <listitem>{@link http://edidev.edicia.local/ Edidev}: Serveur de d&eacute;veloppement.</listitem>
+        <listitem>{@link http://editest.edicia.local/ Editest}: Serveur de test pour les non programmeurs.</listitem>
+        <listitem>{@link http://edidemo.edicia.local/ Edidemo}: Serveur de d&eacute;mo pour les pr&eacute;sentations</listitem>
+        <listitem>{@link http://phpdoc.edicia.local/ phpDoc}: G&eacute;ne&eacute;rateur de documentation</listitem>
+        <listitem>{@link http://edicod.edicia.local/phpmyadmin phpmyadmin}: Administration de la base de donne&eacute;e Edidev</listitem>
+        <listitem>{@link http://mantis.edicia.local/mantis Mantis}: Rapport de bugs et demande/suggestion de fonctionnalit&eacute;s</listitem>
+        <listitem>{@link http://www.php.net/ php.net}: Site de r&eacute;f&eacute;rence du language php.</listitem>
+        <listitem>{@link http://fr.selfhtml.org/ Selfhtml}: Site de r&eacute;f&eacute;rence sur javascript</listitem>
+        <listitem>{@link http://dev.mysql.com/doc/refman/5.0/fr/index.html Mysql}; Site de r&eacute;f&eacute;rence sur Mysql</listitem>
+        <listitem>{@link http://blog.ludikreation.com/2010/02/13/tinymce-documentation-fr-pour-bien-demarrer/ TinyMce}: Site de r&eacute;f&eacute;rence sur TinyMce</listitem>
+        <listitem>{@link http://www.tcpdf.org/index.php TcPDF}: Site de r&eacute;f&eacute;rence sur TcPDF</listitem>
+      </itemizedlist>
+    </para>
+  </refsect1>
+  <refsect1 id="{@id Fonctionnement}">
+    <title>Fonctionnement</title>
+    <para>Les courriers sont scann&eacute;s et d&eacute;pos&eacute;s dans un r&eacute;pertoire. Il
+            existe un r&eacute;pertoire par groupe d'utilisateur (Comptabilit&eacute;, Ressources
+		humaines, ...). Ces r&eacute;pertoires correspondent aux bannettes de la vraie vie.
+		Le programme lit ces r&eacute;pertoires et int&egrave;gre les fichiers qu'il y trouve dans la base :
+	<itemizedlist mark="opencircle">
+		<listitem>Utilisation du nom pour l'objet du document.</listitem>
+		<listitem>Sp&eacute;cification de la date d'entr&eacute;e.</listitem>
+		<listitem>Mise en attente de r&eacute;partition.</listitem>
+		<listitem>Lecture des informations du fichier pour cr&eacute;er une recherche en texte int&eacute;gral.</listitem>
+	</itemizedlist>
+	</para>
+  	<para>
+	  La ou les personnes d&eacute;sign&eacute;es pour la r&eacute;partition ont acc&egrave;s aux documents :
+	<itemizedlist mark="opencircle">
+		<listitem>D&eacute;termination de la date limite de traitement.</listitem>
+  		<listitem>Affectation du document &agrave; un groupe d'utilisateurs et/ou &agrave; un ou plusieurs utilisateurs.</listitem>
+  		<listitem>D&eacute;finition du parcours du document (Workflow)</listitem>
+  	</itemizedlist>
+     </para>
+  </refsect1>
+  <refsect1 id="{@id Traitement}">
+    <title>Traitement du courrier</title>
+    <para>Les courriers sont d&eacute;pos&eacute;s dans le r&eacute;pertoire d&eacute;sign&eacute; par l'utilisateur. Un partage doit &ecirc;tre pr&eacute;alablement 
+      cr&eacute;&eacute; par l'administrateur pour chaque groupe le n&eacute;cessitant. <br />
+      Le r&eacute;pertoire est d&eacute;sign&eacute; par les param&egrave;tres de 
+      la base de donn&eacute;es sous la forme : <variable>&lt;Chemin document (absolu)&gt; &lt;Chemin r&eacute;pertoire d'entr&eacute;e&gt; 
+      &lt;Chemin associ&eacute; au groupe&gt;</variable>.
+    </para>
+    <para>Un processus en t&acirc;che de fond est charg&eacute; d'analyser ce r&eacute;pertoire. Il d&eacute;tecte les fichiers pr&eacute;sents et tente d'en extraire 
+      le texte (par l'utilisation du programme <command>pdftotxt</command>.<br />
+      Le texte extrait est alors utilis&eacute; pour &ecirc;tre analys&eacute; en vue de la recherche int&eacute;grale</para>
+    <para>Les caract&eacute;ristiques du document sont enregistr&eacute;s et un workflow par d&eacute; faut est allou&eacute;</para>
+  </refsect1>
+  <refsect1 id="{@id Todo}">
+    <title>A faire</title>
+    <para> 
+    Encodage d&eacute;fini dans mbstring.overload=4 et mbstring.internal_encoding=UTF-8
+      <itemizedlist>
+        <listitem>Support des todo (vtodo - voir ical)</listitem>
+        <listitem>Envoi de courrier</listitem>
+        <listitem>Utiliser Bcompiler</listitem>
+      </itemizedlist>
+    </para>
+ </refsect1>
+</refentry>

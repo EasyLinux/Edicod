@@ -1,0 +1,13 @@
+﻿<refentry id="{@id}">
+ <refnamediv>
+  <refname>Edition de fichier</refname>
+  <refpurpose>Ce document d&eacute;crit la cr&eacute;ation de document</refpurpose>
+ </refnamediv>
+ <refsynopsisdiv>
+  <author>Greg PIONNER<authorblurb>{@link mailto:greg.pionnier@edicia.fr greg.pionnier@edicia.fr}</authorblurb></author>
+ </refsynopsisdiv>
+  <refsect1 id="{@id Introduction}">
+   <title>Introduction</title>
+    <para>Utilisation de TinyMce</para>
+  </refsect1>
+</refentry>

@@ -1,0 +1,13 @@
+﻿<refentry id="{@id}">
+ <refnamediv>
+  <refname>Classe gui</refname>
+  <refpurpose>Ce document d&eacute;crit l'utilisation de la classe <b>gui</b></refpurpose>
+ </refnamediv>
+ <refsynopsisdiv>
+  <author>Serge NOEL <authorblurb>{@link mailto:cnc@edicia.fr cnc@edicia.fr}</authorblurb></author>
+ </refsynopsisdiv>
+  <refsect1 id="{@id Introduction}">
+   <title>Introduction</title>
+    <para>La classe gui g&egrave;re les affichages</para>
+  </refsect1>
+</refentry>

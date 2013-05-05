@@ -1,0 +1,87 @@
+#!/bin/bash
+
+clear
+echo "Installation des packages manquants"
+echo "-----------------------------------"
+apt-get install -y subversion mysql-client mysql-server php5-mysql mc phpmyadmin php5-cli poppler-utils
+
+clear
+echo "Installation des packages manquants"
+echo "-----------------------------------"
+echo "  Fait"
+echo ""
+echo "Mise en place des fichiers"
+echo "--------------------------"
+cd /var/www
+rm -f *.html
+svn co --username=snoel --password=serge http://192.168.197.46/svn/edicod/branches/1.10.0 .
+chown -R www-data.www-data /var/www/*
+mkdir /etc/Edicod
+chown www-data.www-data /etc/Edicod
+
+sed -e "s/^max_execution_time/max_execution_time = 120 # snoel /g" -i /etc/php5/apache2/php.ini
+sed -e "s/^upload_max_filesize/upload_max_filesize = 32M # snoel /g" -i /etc/php5/apache2/php.ini
+cp /var/www/tutorials/default /etc/apache2/sites-available/default
+/etc/init.d/apache2 restart
+
+clear
+echo "Installation des packages manquants"
+echo "-----------------------------------"
+echo "  Fait"
+echo ""
+echo "Mise en place des fichiers"
+echo "--------------------------"
+echo "  Fait"
+echo ""
+echo "Installation de la base de données"
+echo "----------------------------------"
+echo ""
+echo "Veuillez vous connecter sur http://<votre serveur>/phpmyadmin"
+echo "Puis créez un utilisateur Edicod local avec comme mot de passe Edicod"
+echo "Ensuite creez une base Edicod et donner les droits"
+echo ""
+echo -n "Appuyer sur un entrée quand c'est fait "
+read var
+mysql -u Edicod --password=Edicod < /var/www/tutorials/Edicod.sql
+
+clear
+echo "Installation des packages manquants"
+echo "-----------------------------------"
+echo "  Fait"
+echo ""
+echo "Mise en place des fichiers"
+echo "--------------------------"
+echo "  Fait"
+echo ""
+echo "Installation de la base de données"
+echo "----------------------------------"
+echo "  Fait"
+echo ""
+echo "Paramétrage d'Edicod"
+echo "--------------------"
+echo ""
+echo -n "Mot de passe 'Admin' : "
+read Pass
+sed -e "s/%%MYPASS%%/$Pass/g" /var/www/tutorials/Admin.tmpl > /var/www/tutorials/Admin.sql
+mysql -u Edicod --password=Edicod < /var/www/tutorials/Admin.sql
+cp /var/www/tutorials/edicod.tmpl /etc/Edicod/config.php
+
+mkdir -p /Data/Edicod/ /Data/Edicod/Root /Data/Edicod/Input /Data/Edicod/Incoming /Data/Edicod/Bad /Data/Edicod/Output
+chown -R www-data.www-data /Data/Edicod
+chmod a+x /var/www/Cron/ReadFiles.php
+
+clear
+echo "*******************************************************"
+echo "* Le système est maintenant prêt                      *"
+echo "* Connectez vous sur http://<serveur>                 *"
+echo "*   Login / mot de passe : Admin/<votre mot de passe> *"
+echo "*******************************************************"
+echo 
+echo "Pour automatiser l'arrivée de documents, ajouter une ligne cron"
+echo "avec l'utilisateur www-data afin de lancer /var/www/Cron/ReadFiles.php"
+
+
+
+
+
+

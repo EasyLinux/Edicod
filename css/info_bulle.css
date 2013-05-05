@@ -1,0 +1,39 @@
+/* DEBUT - CSS � conserver */
+
+.tt_abs
+{
+	position: absolute;
+	z-index: 999;
+}
+
+.tt_default
+{
+	background-color : white;
+	border : 1px solid black;
+	color : black;
+	padding : 0px 3px 1px 3px;/* top right bottom left */
+	font-family : arial;
+	font-size : 8pt;
+}
+
+/* ajoutez ci-dessous vos CSS */
+
+.tStyle
+{
+	background-color : #BFDBFF;
+	border : 1px solid grey;
+	color : black;
+	padding : 5px 4px 5px 4px;/* top right bottom left */
+	font-family : arial;
+	font-size : 12px;
+}
+
+.secondStyle
+{
+	background-color : green;
+	border : 1px solid black;
+	color : white;
+	padding : 0px 3px 1px 3px;/* top right bottom left */
+	font-family : arial;
+	font-size : 8pt;
+}

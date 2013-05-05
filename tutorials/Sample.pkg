@@ -1,0 +1,14 @@
+﻿<refentry id="{@id}">
+ <refnamediv>
+  <refname>NOM_DOCUMENT</refname>
+  <refpurpose>TITRE_DOCUMENT</refpurpose>
+ </refnamediv>
+ <refsynopsisdiv>
+  <author>NOM_AUTEUR <authorblurb>{@link mailto:EMAIL_AUTEUR EMAIL_AUTEUR}</authorblurb></author>
+ </refsynopsisdiv>
+ {@toc}
+  <refsect1 id="{@id IDENTIFICATION_CHAP}">
+   <title>TITRE</title>
+    <para>TEXTE_PARAGRAPHE</para>
+  </refsect1>
+</refentry>
