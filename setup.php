@@ -1,24 +1,25 @@
 <?php
 /**
  * Installation du programme
- * Ce fichier sert à l'installation d'Edicod, il suffit de le copier sur l'arborescence du nouveau 
- * site et de le nommer index.php
+ * Ce fichier sert à l'installation d'Edicod, 
+ * il suffit de le copier sur l'arborescence du nouveau 
+ * site et de le nommer http://<URL>/setup.php
  * 
  * @version			0.5
  * @package			Edicod
  * @subpackage	Framework
  * @copyright		Copyright (C) 2011  Serge NOEL. All rights reserved.
- * @license		GNU/GPL, see LICENSE.txt
+ * @license		  GNU/GPL, see LICENSE.txt
  */
  
-/*define(INSTALL_SERVER,"http://192.168.197.46");
+/*define(INSTALL_SERVER,"http://SvnServer");
 define(INSTALL_USER,"snoel");
 define(INSTALL_PASS,"serge");
 define(INSTALL_SVNPATH,"/svn/edicod/branches/"); */
-define(INSTALL_SERVER,"svn://192.168.1.10");
+define(INSTALL_SERVER,"svn://SvnServer");
 define(INSTALL_SVNPATH,"/Edicod/branches/");
 define(INSTALL_USER,"snoel");
-define(INSTALL_PASS,"1duB015!");
+define(INSTALL_PASS,"Secret");
 
 /**
  * Première étape

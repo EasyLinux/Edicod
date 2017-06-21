@@ -13,7 +13,7 @@
  * @copyright		Copyright (C) 2005 - 2009 Serge NOEL. All rights reserved.
  * @license		GNU/GPL, see LICENSE.txt
  *
- * @todo   Rendre la doc compatible Javascript en modifiant phpDoc
+ * @todo   Rendre la doc compatible Javascript en utilisant jsDoc
  * @todo   ALTER TABLE nom_base AUTO_INCREMENT = xxx 
  * @todo	 Utilisateurs systeme uid < 100
  * @todo   Groupes systèmes     gid < 100
