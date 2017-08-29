@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='vendor/components/bootstrap/css/bootstrap.css' type='text/css' rel='stylesheet'/>
+  <link href='css/courrier.css' type='text/css' rel='stylesheet'/>
+  <link rel='shortcut icon' href='favicon.ico' />
+  <meta content='text/html; charset=UTF-8' http-equiv='content-type'/>
+  <title>Gestion du courrier</title>
+  <!-- <script language='JavaScript' src='javascript/MD5.js' type='text/javascript'></script>
+  <script language='JavaScript' src='javascript/login.js' type='text/javascript'></script> -->
+  <script language='JavaScript' src='vendor/components/jquery/jquery.min.js' type='text/javascript'></script>
+  <script language='JavaScript' src='vendor/components/jqueryui/jquery-ui.min.js' type='text/javascript'></script>
+  <script language='JavaScript' src='vendor/components/bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
+</head>
+<body>

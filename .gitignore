@@ -1,1 +1,6 @@
 /vendor/
+/build/
+!/build/README.md
+/www/templates_c/
+/www/config/
+!/www/templates_c/README.md

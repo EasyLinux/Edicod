@@ -1,0 +1,14 @@
+<?php
+require_once("class/". AUTH ."Auth.inc");
+
+class User extends authClass {
+  
+  private $Lang;
+  
+  public function Init($Config)
+  {
+  	
+  }
+  
+
+}
